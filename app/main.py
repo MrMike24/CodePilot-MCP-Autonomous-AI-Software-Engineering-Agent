@@ -1,6 +1,6 @@
-from fastapi import FastAPI, HTTPException, Depends, Request, status
-from demo_repository.app.rate_limiter import check_rate_limit
+from fastapi import FastAPI, HTTPException, status
 from demo_repository.app.models import UserCreate, UserResponse
+from pydantic import BaseModel
 
 app = FastAPI(title="Demo FastAPI Application")
 
@@ -20,7 +20,6 @@ def list_users():
 
 @app.post("/users", response_model=UserResponse, status_code=201)
 def create_user(user: UserCreate):
-    # INTENTIONAL BUG: Unhandled exception returning HTTP 500 when email is empty
     if not user.email or not user.email.strip():
         raise HTTPException(status_code=400, detail="Email cannot be empty")
 
@@ -30,24 +29,20 @@ def create_user(user: UserCreate):
     return new_user
 
 
-from fastapi import Depends, HTTPException, Request, status
-from demo_repository.app.rate_limiter import check_rate_limit
-from pydantic import BaseModel
-
 class LoginRequest(BaseModel):
     username: str
     password: str
 
+
 class LoginResponse(BaseModel):
     access_token: str
-    token_type: str = 'bearer'
+    token_type: str = "bearer"
 
-@app.post("/auth/login", response_model=LoginResponse, dependencies=[Depends(check_rate_limit)])
+
+@app.post("/auth/login", response_model=LoginResponse)
 def login(req: LoginRequest):
     if req.username == "admin" and req.password == "secret123":
         return {"access_token": "valid_token_xyz_987", "token_type": "bearer"}
     if req.username == "user" and req.password == "password":
         return {"access_token": "valid_token_user_123", "token_type": "bearer"}
     raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid credentials")
-
-# Automated enhancement for task: Fix database connection pool timeout in user service

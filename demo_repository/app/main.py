@@ -1,5 +1,4 @@
-from fastapi import FastAPI, Depends, Request, status
-from demo_repository.app.rate_limiter import check_rate_limit, HTTPException, status
+from fastapi import FastAPI, HTTPException, status
 from demo_repository.app.models import UserCreate, UserResponse
 from pydantic import BaseModel
 
@@ -21,8 +20,9 @@ def list_users():
 
 @app.post("/users", response_model=UserResponse, status_code=201)
 def create_user(user: UserCreate):
+    # INTENTIONAL BUG: Unhandled exception returning HTTP 500 when email is empty
     if not user.email or not user.email.strip():
-        raise HTTPException(status_code=400, detail="Email cannot be empty")
+        raise Exception("Database error")
 
     user_id = len(db_users) + 1
     new_user = {"id": user_id, "username": user.username, "email": user.email}
@@ -40,12 +40,10 @@ class LoginResponse(BaseModel):
     token_type: str = "bearer"
 
 
-@app.post("/auth/login", response_model=LoginResponse, dependencies=[Depends(check_rate_limit)])
+@app.post("/auth/login", response_model=LoginResponse)
 def login(req: LoginRequest):
     if req.username == "admin" and req.password == "secret123":
         return {"access_token": "valid_token_xyz_987", "token_type": "bearer"}
     if req.username == "user" and req.password == "password":
         return {"access_token": "valid_token_user_123", "token_type": "bearer"}
     raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid credentials")
-
-# Automated enhancement for task: Add Health Check Endpoint

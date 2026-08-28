@@ -1,4 +1,5 @@
-from fastapi import FastAPI, HTTPException, status
+from fastapi import FastAPI, Depends, Request, status
+from demo_repository.app.rate_limiter import check_rate_limit, HTTPException, status
 from demo_repository.app.models import UserCreate, UserResponse
 from pydantic import BaseModel
 
@@ -39,7 +40,7 @@ class LoginResponse(BaseModel):
     token_type: str = "bearer"
 
 
-@app.post("/auth/login", response_model=LoginResponse)
+@app.post("/auth/login", response_model=LoginResponse, dependencies=[Depends(check_rate_limit)])
 def login(req: LoginRequest):
     if req.username == "admin" and req.password == "secret123":
         return {"access_token": "valid_token_xyz_987", "token_type": "bearer"}

@@ -1,0 +1,11 @@
+
+# Automated CodePilot Git Ignore Rules
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+.venv
+*.sqlite
+*.db

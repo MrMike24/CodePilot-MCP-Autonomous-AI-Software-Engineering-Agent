@@ -1,0 +1,14 @@
+[project]
+name = "demo-repository"
+version = "0.1.0"
+description = "Demo FastAPI Application for CodePilot-MCP verification"
+dependencies = [
+    "fastapi>=0.110.0",
+    "pydantic>=2.6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.1.0",
+    "httpx>=0.27.0",
+]

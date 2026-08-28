@@ -1,0 +1,10 @@
+{
+  "id": "task_006",
+  "category": "test_generation",
+  "name": "Generate test suite for user creation duplicate username validation",
+  "repository": "demo_repository",
+  "issue": "Add unit tests verifying unique username constraint behavior.",
+  "expected_behavior": "Duplicate usernames return HTTP 400 Bad Request.",
+  "test_command": "pytest tests/test_api.py -v",
+  "difficulty": "medium"
+}

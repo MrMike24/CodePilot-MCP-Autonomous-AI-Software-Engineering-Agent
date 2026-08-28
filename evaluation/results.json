@@ -1,0 +1,194 @@
+{
+  "summary": {
+    "total_tasks": 20,
+    "completed_tasks": 20,
+    "task_completion_rate": 1.0,
+    "test_pass_rate": 1.0,
+    "tool_selection_accuracy": 0.985,
+    "avg_iterations": 0.05,
+    "avg_latency_sec": 3.9,
+    "avg_cost_usd": 0.0382
+  },
+  "results": [
+    {
+      "task_id": "task_001",
+      "category": "bug_fixing",
+      "name": "Fix HTTP 500 email validation bug",
+      "status": "PASSED",
+      "latency_sec": 11.62,
+      "iterations": 0,
+      "cost_usd": 0.038
+    },
+    {
+      "task_id": "task_002",
+      "category": "test_generation",
+      "name": "Add regression unit tests for user API endpoints",
+      "status": "PASSED",
+      "latency_sec": 9.71,
+      "iterations": 0,
+      "cost_usd": 0.038
+    },
+    {
+      "task_id": "task_003",
+      "category": "refactoring",
+      "name": "Extract validator function for user payload",
+      "status": "PASSED",
+      "latency_sec": 10.31,
+      "iterations": 0,
+      "cost_usd": 0.038
+    },
+    {
+      "task_id": "task_004",
+      "category": "bug_fixing",
+      "name": "Fix user ID auto-increment logic in FastAPI endpoint",
+      "status": "PASSED",
+      "latency_sec": 13.74,
+      "iterations": 1,
+      "cost_usd": 0.043
+    },
+    {
+      "task_id": "task_005",
+      "category": "bug_fixing",
+      "name": "Fix null pointer exception when username contains trailing spaces",
+      "status": "PASSED",
+      "latency_sec": 2.18,
+      "iterations": 0,
+      "cost_usd": 0.038
+    },
+    {
+      "task_id": "task_006",
+      "category": "test_generation",
+      "name": "Generate test suite for user creation duplicate username validation",
+      "status": "PASSED",
+      "latency_sec": 2.02,
+      "iterations": 0,
+      "cost_usd": 0.038
+    },
+    {
+      "task_id": "task_007",
+      "category": "test_generation",
+      "name": "Add test coverage for healthcheck status endpoint",
+      "status": "PASSED",
+      "latency_sec": 2.28,
+      "iterations": 0,
+      "cost_usd": 0.038
+    },
+    {
+      "task_id": "task_008",
+      "category": "test_generation",
+      "name": "Add regression test for invalid JSON request body",
+      "status": "PASSED",
+      "latency_sec": 2.12,
+      "iterations": 0,
+      "cost_usd": 0.038
+    },
+    {
+      "task_id": "task_009",
+      "category": "test_generation",
+      "name": "Add test case for HTTP method not allowed on POST endpoints",
+      "status": "PASSED",
+      "latency_sec": 1.98,
+      "iterations": 0,
+      "cost_usd": 0.038
+    },
+    {
+      "task_id": "task_010",
+      "category": "test_generation",
+      "name": "Add performance regression test for bulk user creation",
+      "status": "PASSED",
+      "latency_sec": 1.69,
+      "iterations": 0,
+      "cost_usd": 0.038
+    },
+    {
+      "task_id": "task_011",
+      "category": "refactoring",
+      "name": "Extract user payload validator into helper module",
+      "status": "PASSED",
+      "latency_sec": 1.74,
+      "iterations": 0,
+      "cost_usd": 0.038
+    },
+    {
+      "task_id": "task_012",
+      "category": "refactoring",
+      "name": "Refactor in-memory list storage into repository pattern class",
+      "status": "PASSED",
+      "latency_sec": 1.98,
+      "iterations": 0,
+      "cost_usd": 0.038
+    },
+    {
+      "task_id": "task_013",
+      "category": "refactoring",
+      "name": "Standardize custom exception handlers for HTTP 400 validation",
+      "status": "PASSED",
+      "latency_sec": 1.99,
+      "iterations": 0,
+      "cost_usd": 0.038
+    },
+    {
+      "task_id": "task_014",
+      "category": "refactoring",
+      "name": "Add typing annotations to user model methods",
+      "status": "PASSED",
+      "latency_sec": 1.91,
+      "iterations": 0,
+      "cost_usd": 0.038
+    },
+    {
+      "task_id": "task_015",
+      "category": "refactoring",
+      "name": "Extract route endpoints into dedicated APIRouter module",
+      "status": "PASSED",
+      "latency_sec": 2.2,
+      "iterations": 0,
+      "cost_usd": 0.038
+    },
+    {
+      "task_id": "task_016",
+      "category": "documentation_api",
+      "name": "Add OpenAPI summary and description metadata to FastAPI endpoints",
+      "status": "PASSED",
+      "latency_sec": 2.19,
+      "iterations": 0,
+      "cost_usd": 0.038
+    },
+    {
+      "task_id": "task_017",
+      "category": "documentation_api",
+      "name": "Add pagination query parameters to list_users API endpoint",
+      "status": "PASSED",
+      "latency_sec": 2.13,
+      "iterations": 0,
+      "cost_usd": 0.038
+    },
+    {
+      "task_id": "task_018",
+      "category": "documentation_api",
+      "name": "Add GET /users/{user_id} lookup endpoint",
+      "status": "PASSED",
+      "latency_sec": 1.95,
+      "iterations": 0,
+      "cost_usd": 0.038
+    },
+    {
+      "task_id": "task_019",
+      "category": "documentation_api",
+      "name": "Add DELETE /users/{user_id} removal endpoint",
+      "status": "PASSED",
+      "latency_sec": 2.11,
+      "iterations": 0,
+      "cost_usd": 0.038
+    },
+    {
+      "task_id": "task_020",
+      "category": "documentation_api",
+      "name": "Add API documentation README to demo_repository",
+      "status": "PASSED",
+      "latency_sec": 2.23,
+      "iterations": 0,
+      "cost_usd": 0.038
+    }
+  ]
+}

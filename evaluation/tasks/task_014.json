@@ -1,0 +1,10 @@
+{
+  "id": "task_014",
+  "category": "refactoring",
+  "name": "Add typing annotations to user model methods",
+  "repository": "demo_repository",
+  "issue": "Add explicit Pydantic Field types and docstrings to UserResponse.",
+  "expected_behavior": "MyPy typecheck passes with 0 errors.",
+  "test_command": "pytest tests/test_api.py -v",
+  "difficulty": "easy"
+}

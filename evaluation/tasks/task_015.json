@@ -1,0 +1,10 @@
+{
+  "id": "task_015",
+  "category": "refactoring",
+  "name": "Extract route endpoints into dedicated APIRouter module",
+  "repository": "demo_repository",
+  "issue": "Move /users endpoints from main.py into app/api/users.py APIRouter.",
+  "expected_behavior": "APIRouter registered, tests pass.",
+  "test_command": "pytest tests/test_api.py -v",
+  "difficulty": "medium"
+}

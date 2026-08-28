@@ -1,0 +1,10 @@
+{
+  "id": "task_005",
+  "category": "bug_fixing",
+  "name": "Fix null pointer exception when username contains trailing spaces",
+  "repository": "demo_repository",
+  "issue": "Sanitize username field by stripping leading and trailing whitespace characters.",
+  "expected_behavior": "Username is trimmed prior to insertion.",
+  "test_command": "pytest tests/test_api.py -v",
+  "difficulty": "medium"
+}

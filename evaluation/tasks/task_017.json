@@ -1,0 +1,10 @@
+{
+  "id": "task_017",
+  "category": "documentation_api",
+  "name": "Add pagination query parameters to list_users API endpoint",
+  "repository": "demo_repository",
+  "issue": "Add skip and limit parameters (default skip=0, limit=10) to GET /users.",
+  "expected_behavior": "GET /users respects skip and limit.",
+  "test_command": "pytest tests/test_api.py -v",
+  "difficulty": "medium"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "task_011",
+  "category": "refactoring",
+  "name": "Extract user payload validator into helper module",
+  "repository": "demo_repository",
+  "issue": "Extract validation logic from route handler into app/validators.py.",
+  "expected_behavior": "Validation is modularized and passes unit tests.",
+  "test_command": "pytest tests/test_api.py -v",
+  "difficulty": "medium"
+}

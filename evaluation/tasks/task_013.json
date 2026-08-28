@@ -1,0 +1,10 @@
+{
+  "id": "task_013",
+  "category": "refactoring",
+  "name": "Standardize custom exception handlers for HTTP 400 validation",
+  "repository": "demo_repository",
+  "issue": "Add global exception handler for UserValidationError.",
+  "expected_behavior": "UserValidationError maps to HTTP 400.",
+  "test_command": "pytest tests/test_api.py -v",
+  "difficulty": "medium"
+}

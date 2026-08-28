@@ -1,0 +1,10 @@
+{
+  "id": "task_001",
+  "category": "bug_fixing",
+  "name": "Fix HTTP 500 email validation bug",
+  "repository": "demo_repository",
+  "issue": "Fix the bug where the API returns HTTP 500 when the user submits an empty email address. Add regression tests.",
+  "expected_behavior": "API returns HTTP 400 Bad Request with message 'Email cannot be empty'.",
+  "test_command": "pytest tests/test_api.py -v",
+  "difficulty": "medium"
+}

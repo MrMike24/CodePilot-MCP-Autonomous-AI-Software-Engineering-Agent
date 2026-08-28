@@ -1,0 +1,10 @@
+{
+  "id": "task_016",
+  "category": "documentation_api",
+  "name": "Add OpenAPI summary and description metadata to FastAPI endpoints",
+  "repository": "demo_repository",
+  "issue": "Add rich docstrings and summary tags to /users endpoints for Swagger docs.",
+  "expected_behavior": "OpenAPI schema contains descriptions.",
+  "test_command": "pytest tests/test_api.py -v",
+  "difficulty": "easy"
+}

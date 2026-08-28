@@ -1,0 +1,10 @@
+{
+  "id": "task_007",
+  "category": "test_generation",
+  "name": "Add test coverage for healthcheck status endpoint",
+  "repository": "demo_repository",
+  "issue": "Add unit test for API root / response payload structure.",
+  "expected_behavior": "Root endpoint returns 200 OK with expected JSON structure.",
+  "test_command": "pytest tests/test_api.py -v",
+  "difficulty": "easy"
+}

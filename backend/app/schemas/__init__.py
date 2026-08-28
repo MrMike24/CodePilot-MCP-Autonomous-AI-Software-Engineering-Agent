@@ -1,0 +1,31 @@
+from backend.app.schemas.task import (
+    AgentRunTrace,
+    AgentStepTrace,
+    ApprovalRequest,
+    RepositoryCreate,
+    RepositoryResponse,
+    ReviewFinding,
+    ReviewResult,
+    TaskCreate,
+    TaskDetailResponse,
+    TaskPlan,
+    TaskPlanSubtask,
+    TaskResponse,
+    ToolCallTrace,
+)
+
+__all__ = [
+    "RepositoryCreate",
+    "RepositoryResponse",
+    "TaskCreate",
+    "TaskPlanSubtask",
+    "TaskPlan",
+    "ReviewFinding",
+    "ReviewResult",
+    "ApprovalRequest",
+    "ToolCallTrace",
+    "AgentStepTrace",
+    "AgentRunTrace",
+    "TaskResponse",
+    "TaskDetailResponse",
+]

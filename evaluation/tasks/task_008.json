@@ -1,0 +1,10 @@
+{
+  "id": "task_008",
+  "category": "test_generation",
+  "name": "Add regression test for invalid JSON request body",
+  "repository": "demo_repository",
+  "issue": "Add unit test sending malformed JSON payload to /users.",
+  "expected_behavior": "FastAPI returns 422 Unprocessable Entity.",
+  "test_command": "pytest tests/test_api.py -v",
+  "difficulty": "medium"
+}

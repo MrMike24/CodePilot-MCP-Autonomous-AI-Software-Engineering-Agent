@@ -1,0 +1,10 @@
+{
+  "id": "task_002",
+  "category": "test_generation",
+  "name": "Add regression unit tests for user API endpoints",
+  "repository": "demo_repository",
+  "issue": "Add automated pytest unit tests for missing edge cases in user API endpoints.",
+  "expected_behavior": "Pytest suite runs clean with > 90% coverage.",
+  "test_command": "pytest tests/test_api.py -v",
+  "difficulty": "easy"
+}

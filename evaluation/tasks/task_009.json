@@ -1,0 +1,10 @@
+{
+  "id": "task_009",
+  "category": "test_generation",
+  "name": "Add test case for HTTP method not allowed on POST endpoints",
+  "repository": "demo_repository",
+  "issue": "Add unit test submitting PUT request to /users.",
+  "expected_behavior": "Returns HTTP 405 Method Not Allowed.",
+  "test_command": "pytest tests/test_api.py -v",
+  "difficulty": "easy"
+}

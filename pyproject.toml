@@ -1,0 +1,65 @@
+[project]
+name = "codepilot-mcp"
+version = "0.1.0"
+description = "Autonomous AI Software Engineering Agent using MCP, LangGraph, Qdrant Code RAG, and Sandboxed Docker Execution"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.110.0",
+    "uvicorn[standard]>=0.28.0",
+    "pydantic>=2.6.0",
+    "pydantic-settings>=2.2.0",
+    "sqlalchemy[asyncio]>=2.0.28",
+    "asyncpg>=0.29.0",
+    "alembic>=1.13.0",
+    "langgraph>=0.0.30",
+    "langchain-core>=0.1.30",
+    "langchain-openai>=0.0.8",
+    "mcp>=0.1.0",
+    "qdrant-client>=1.8.0",
+    "tree-sitter>=0.21.0",
+    "opentelemetry-api>=1.23.0",
+    "opentelemetry-sdk>=1.23.0",
+    "opentelemetry-instrumentation-fastapi>=0.44b0",
+    "prometheus-client>=0.20.0",
+    "python-multipart>=0.0.9",
+    "httpx>=0.27.0",
+    "docker>=7.0.0",
+    "gitpython>=3.1.42",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["backend*", "mcp_servers*", "rag*", "evaluation*", "demo_repository*"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.1.0",
+    "pytest-asyncio>=0.23.5",
+    "pytest-cov>=4.1.0",
+    "ruff>=0.3.0",
+    "mypy>=1.9.0",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "B", "I", "N", "UP", "PL", "RUF"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+markers = [
+    "unit: mark test as a unit test",
+    "integration: mark test as an integration test requiring external services",
+    "security: mark test as a security sandbox test",
+]

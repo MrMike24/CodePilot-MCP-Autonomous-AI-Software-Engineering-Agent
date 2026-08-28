@@ -1,0 +1,10 @@
+{
+  "id": "task_003",
+  "category": "refactoring",
+  "name": "Extract validator function for user payload",
+  "repository": "demo_repository",
+  "issue": "Refactor route handler validation logic into a reusable validate_user_input helper function.",
+  "expected_behavior": "Route handler calls helper function, all unit tests pass cleanly.",
+  "test_command": "pytest tests/test_api.py -v",
+  "difficulty": "medium"
+}

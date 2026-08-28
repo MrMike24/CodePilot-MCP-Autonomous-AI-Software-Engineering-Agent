@@ -1,0 +1,10 @@
+{
+  "id": "task_010",
+  "category": "test_generation",
+  "name": "Add performance regression test for bulk user creation",
+  "repository": "demo_repository",
+  "issue": "Add unit test measuring response time for 100 consecutive user creations.",
+  "expected_behavior": "Executes under 500ms total latency.",
+  "test_command": "pytest tests/test_api.py -v",
+  "difficulty": "hard"
+}

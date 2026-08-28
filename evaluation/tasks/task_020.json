@@ -1,0 +1,10 @@
+{
+  "id": "task_020",
+  "category": "documentation_api",
+  "name": "Add API documentation README to demo_repository",
+  "repository": "demo_repository",
+  "issue": "Create README.md inside demo_repository detailing API endpoints and usage.",
+  "expected_behavior": "README.md created with complete API documentation.",
+  "test_command": "pytest tests/test_api.py -v",
+  "difficulty": "easy"
+}

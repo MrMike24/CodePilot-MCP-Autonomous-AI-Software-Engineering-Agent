@@ -1,0 +1,11 @@
+{
+  "id": "task_004",
+  "category": "bug_fixing",
+  "name": "Fix user ID auto-increment logic in FastAPI endpoint",
+  "repository": "demo_repository",
+  "issue": "Fix edge case where user ID auto-increment raises Indexing error on empty user list. Requires forced debugging iteration.",
+  "expected_behavior": "User ID auto-increments from 1 cleanly.",
+  "test_command": "pytest tests/test_api.py -v",
+  "difficulty": "hard",
+  "force_debug": true
+}

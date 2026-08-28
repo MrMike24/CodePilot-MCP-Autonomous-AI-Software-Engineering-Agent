@@ -1,0 +1,10 @@
+{
+  "id": "task_012",
+  "category": "refactoring",
+  "name": "Refactor in-memory list storage into repository pattern class",
+  "repository": "demo_repository",
+  "issue": "Encapsulate db_users array within UserRepository class.",
+  "expected_behavior": "Route handler invokes UserRepository instance methods.",
+  "test_command": "pytest tests/test_api.py -v",
+  "difficulty": "medium"
+}

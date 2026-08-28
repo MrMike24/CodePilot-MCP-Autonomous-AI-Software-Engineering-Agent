@@ -1,0 +1,10 @@
+{
+  "id": "task_019",
+  "category": "documentation_api",
+  "name": "Add DELETE /users/{user_id} removal endpoint",
+  "repository": "demo_repository",
+  "issue": "Implement DELETE /users/{user_id} endpoint removing user from in-memory store.",
+  "expected_behavior": "DELETE removes user and returns HTTP 204 No Content.",
+  "test_command": "pytest tests/test_api.py -v",
+  "difficulty": "medium"
+}

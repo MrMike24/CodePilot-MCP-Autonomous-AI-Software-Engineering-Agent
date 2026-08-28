@@ -1,0 +1,10 @@
+{
+  "id": "task_018",
+  "category": "documentation_api",
+  "name": "Add GET /users/{user_id} lookup endpoint",
+  "repository": "demo_repository",
+  "issue": "Implement GET /users/{user_id} endpoint returning HTTP 404 if not found.",
+  "expected_behavior": "GET /users/1 returns user object or 404.",
+  "test_command": "pytest tests/test_api.py -v",
+  "difficulty": "medium"
+}
